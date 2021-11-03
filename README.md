@@ -1,7 +1,32 @@
-# T-WEB-501-MAR-5-1-jobboard-thibault.jacques
+# Job board
 
 
-This is an epitech project which the subject is creating a jobboard alike some existing platforms (Indeed etc).
+This is an epitech project, the purpose was to create a Indeed like application where users can apply to job offers and where companies could publish and manage them.
 
-There is a backend part based on NodeJS.
-And then a frontend part based on VueJS.
+The API is written in NodeJs by Zaykos.
+
+The Front-End is written in VueJs by Felix.
+
+
+## To run the frontend : 
+
+```
+cd front-end
+
+npm install
+
+npm run serve
+
+```
+
+## To run the backend :
+
+```
+cd backend
+
+npm install
+
+npm run start
+
+```
+
