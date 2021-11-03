@@ -1,0 +1,16 @@
+#adlist{
+    margin-top: 2%;
+}
+
+
+
+.pagination{
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+.page-item.active .page-link .pagination{ 
+    background-color: black !important;
+}

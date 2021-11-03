@@ -1,0 +1,698 @@
+{
+	"info": {
+		"_postman_id": "58e16a30-8cc7-41af-a938-cb74ba0d87b4",
+		"name": "JobBoard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "People Requests",
+			"item": [
+				{
+					"name": "GetAll people",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById people",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByField people",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people/name/thibs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"name",
+								"thibs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateById (full body) people",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"aze\",\n    \"firstName\": \"salute\",\n    \"email\": \"azer\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/people/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByField people",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people/5/address/43 chemins de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"5",
+								"address",
+								"43 chemins de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById people",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"salute\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/people/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"salute\",\n    \"firstName\": \"salute\",\n    \"email\": \"salute\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/people/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company requests",
+			"item": [
+				{
+					"name": "GetAll company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/company/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/people/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByField company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/company/name/thibs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"name",
+								"thibs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateById (full body) company",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"aze\",\n    \"firstName\": \"salute\",\n    \"email\": \"azer\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/company/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByField company",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/company/5/address/43 chemins de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"5",
+								"address",
+								"43 chemins de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById company",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/company/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"salute\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/company/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"salute\",\n    \"firstName\": \"salute\",\n    \"email\": \"salute\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/company/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"company",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advertisements requests",
+			"item": [
+				{
+					"name": "GetAll advertisement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById advertisement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByField advertisement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement/name/thibs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement",
+								"name",
+								"thibs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateById (full body) advertisement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"aze\",\n    \"firstName\": \"salute\",\n    \"email\": \"azer\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByField advertisement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement/5/address/43 chemins de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement",
+								"5",
+								"address",
+								"43 chemins de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById advertisement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/advertisement/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"advertisement",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JobApplications requests",
+			"item": [
+				{
+					"name": "GetAll jobApp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById jobApp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByField jobApp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp/name/thibs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp",
+								"name",
+								"thibs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateById (full body) jobApp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"aze\",\n    \"firstName\": \"salute\",\n    \"email\": \"azer\",\n    \"password\": \"123\",\n    \"address\": \"43 chemins\",\n    \"postalCode\": \"13100\",\n    \"city\": \"Aix\",\n    \"birthDate\": \"2021/01/09\",\n    \"cv\": \"http://link-of-your-cv/\",\n    \"website\": \"http://your-website.fr\",\n    \"picture\": \"http://link-of-your-picture\",\n    \"phone\": \"065829646\",\n    \"gender\": \"male\",\n    \"isAdmin\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByField jobApp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp/5/address/43 chemins de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp",
+								"5",
+								"address",
+								"43 chemins de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById jobApp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8500/api/jobApp/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"jobApp",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
